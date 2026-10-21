@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scholarship Monitoring and Academic Compliance System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Scholarship Monitoring &amp; Academic Compliance</h1>
+  <div id="who" class="who" hidden><span id="whoText"></span> <button id="logoutBtn" class="ghost">Sign out</button></div>
+</header>
+<div id="toast" class="toast" hidden></div>
+
+<main>
+  <section id="loginView" class="card narrow" hidden>
+    <h2>Sign in</h2>
+    <form id="loginForm">
+      <label>Email <input type="email" id="email" required autocomplete="username"></label>
+      <label>Password <input type="password" id="password" required autocomplete="current-password"></label>
+      <button type="submit">Sign in</button>
+    </form>
+    <p class="muted">Synthetic test accounts only. Accounts are created by the administrator in Supabase Authentication.</p>
+  </section>
+
+  <section id="scholarView" hidden></section>
+  <section id="staffView" hidden></section>
+</main>
+
+<dialog id="detailDlg"></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
